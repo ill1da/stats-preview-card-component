@@ -1,0 +1,145 @@
+@font-face {
+    font-family: Inter;
+    src: url(./Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face {
+    font-family: LexendDeca;
+    src: url(./LexendDeca-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0; padding: 0;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.container{
+    width: 100%; height: 100vh;
+    top: 0; left: 0;
+    background-color: rgba(10, 12, 27, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.stats-card{
+    width: 1110px; height: 450px;
+    background-color: rgba(28, 25, 56, 1);
+
+    border: 0px; border-radius: 10px;
+
+    display: flex;
+
+}
+
+.stats-card-text{
+    box-sizing: border-box;
+    width: 570px; height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 76px 120px 70px 70px;
+}
+.stats-card-text h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+}
+.title-purple{
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(165, 97, 208, 1);
+}
+.stats-card-text p{
+    line-height: 25px;
+}
+
+.card-statistics{
+    height: auto; width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.stac h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+}
+.stac p{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.stats-card-preview{
+    width: 540px; height: 450px;
+    background-image: url(./images/image-header-desktop.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 0px 10px 10px 0px;
+}
+.stats-card-preview::before{
+    content: "";
+    position: absolute;
+    width: 540px; height: 450px;
+    background-color: rgba(104, 0, 168, 0.6);
+    border-radius: 0px 10px 10px 0px;
+    z-index: 5;
+}
+
+@media (max-width:1110px) {
+    .stats-card{
+        width: 330px; height: 780px;
+       
+        flex-direction: column-reverse;
+    }
+
+    .stats-card-preview{
+        width: 330px; min-height: 240px; max-height: 240px;
+        background-image: url(./images/image-header-mobile.png);
+    
+        border-radius: 10px 10px 0px 0px;
+    }
+    .stats-card-preview::before{
+        width: 330px; height: 240px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .stats-card-text{
+        box-sizing: border-box;
+        width: 100%; height: 100%;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 35px;
+    }
+    .stats-card-text{
+        text-align: center;
+    }
+    .stats-card-text h2{
+        font-size: 28px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 1);
+        margin-bottom: 30px;
+    }
+    .title-purple{
+        font-size: 28px;
+    }
+
+    .card-statistics{
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        margin-top: 40px;
+    }
+}
